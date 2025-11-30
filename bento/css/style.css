@@ -1,0 +1,108 @@
+/* 1. ベースのスタイル */
+body {
+	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+	background-color: #fdf5e6;
+	/* 薄いオレンジ背景（食欲増進色） */
+	color: #333;
+	margin: 0;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	color: #ff8c00;
+	/* 濃いオレンジ */
+	margin-bottom: 30px;
+}
+
+/* 2. レイアウト（横並びにする魔法：Flexbox） */
+.menu-container {
+	display: flex;
+	/* 横並びにする */
+	flex-wrap: wrap;
+	/* 端まで来たら折り返す */
+	gap: 20px;
+	/* アイテム同士の隙間 */
+	justify-content: center;
+	/* 真ん中寄せ */
+}
+
+/* 3. お弁当カードのデザイン */
+.menu-item {
+	background-color: white;
+	width: 250px;
+	/* カードの幅 */
+	border-radius: 15px;
+	/* 角を丸くする（ポップさの重要ポイント） */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	/* 影をつけて浮いているように見せる */
+	overflow: hidden;
+	/* 角丸からはみ出た画像を隠す */
+	transition: transform 0.2s;
+	/* アニメーションの準備 */
+}
+
+/* ホバー時に少し浮き上がる演出 */
+.menu-item:hover {
+	transform: translateY(-5px);
+}
+
+/* 4. 画像周り */
+.menu-img-box {
+	width: 100%;
+	height: 180px;
+	/* 画像の高さを統一 */
+	background-color: #eee;
+}
+
+.menu-img-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* 画像を枠いっぱいに綺麗にトリミング */
+}
+
+/* 5. 文字周り */
+.menu-content {
+	padding: 15px;
+	text-align: center;
+}
+
+.menu-content h3 {
+	margin: 0 0 10px 0;
+	font-size: 1.2rem;
+}
+
+.price {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #e74c3c;
+	/* 価格は赤系で目立たせる */
+	margin-bottom: 15px;
+}
+
+/* 6. ボタンのデザイン */
+.btn-order {
+	background-color: #ff8c00;
+	color: white;
+	border: none;
+	padding: 10px 30px;
+	border-radius: 20px;
+	/* 丸いボタン */
+	font-size: 1rem;
+	cursor: pointer;
+	width: 100%;
+}
+
+.btn-order:hover {
+	background-color: #e67e22;
+	/* マウスを乗せた時に少し暗く */
+}
+
+.error-text {
+	color: gray;
+	font-weight: bold;
+	background-color: #eee;
+	padding: 5px;
+	border-radius: 5px;
+}
